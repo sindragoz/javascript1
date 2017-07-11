@@ -1,0 +1,337 @@
+*::-webkit-input-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*:-moz-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*::-moz-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*:-ms-input-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+::selection {
+   background: transparent;
+}
+::-moz-selection {
+   background: transparent;
+}
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	min-height: 700px;
+	background-attachment: fixed;
+	background-image: url(../images/bgRoom.jpg);
+	-webkit-background-size: 100% auto;
+	background-size: 100% 100vh;
+	font-family: "AzoftSansRegular", sans-serif;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+	background-repeat: no-repeat;
+}
+
+.calcRow>div{
+	margin: 1px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 66px;
+	height: 66px;
+	display: inline-block;
+	position: relative;
+	line-height: 60px;
+	text-align: center;
+	font-size: 30px;
+	background: rgb(35,35,35);
+}
+.row1 div{
+	display: block;
+	float:left;
+}
+.row2 div{
+	display: block;
+	float:left;
+}
+.row0 div{
+	float:left;
+}
+.row3 div{
+	float:left;
+}
+.row4 div{
+	float:left;
+}
+.row5 div{
+	float:left;
+	line-height: 20px;
+}
+.calcRow>div:hover{
+	box-shadow: 0 0 20px rgb(255,190,0);
+	text-shadow: 0 0 20px rgb(255,190,0);
+	transition:linear text-shadow,box-shadow .15s;
+}
+.calcRow>.clearOp{
+	color:rgb(176,19,98);
+}
+.calcWrap .btnOperator:hover{
+	z-index: 10;
+	box-shadow:none;
+	text-shadow: 0 0 20px rgb(255,190,0);
+	transition:linear text-shadow,box-shadow .15s;
+}
+.calcRow>div:active,.calcWrap .btnOperator:active{
+	//box-shadow: 0 0 20px rgb(0,0,255);
+	//text-shadow: 0 0 20px rgb(100,154,244);
+	box-shadow: none;
+	text-shadow: none;
+	color: rgb(0,0,255);
+	border: 3px groove gray;
+	border-radius: 2px;
+}
+.calcRow>.nums{
+}
+.calc{
+	color:white;
+	text-align: center;
+}
+.calcWrap{
+	min-width:276px;
+	margin: 10px;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	border: 2px white solid;
+	
+	z-index: 10;
+	background-color: gray;
+}
+#tbRes{
+	border: none;
+	text-align: right;
+	padding-right: 15px;
+	width: 269px;
+	background-color:  rgb(35,35,35);
+	font-size: 30px;
+	line-height: 60px;
+	text-shadow: 0 0 20px rgb(255,190,0);
+
+}
+.tbResWrap{
+	display: inline-block;
+	text-align: right;
+	font-weight: bold;
+	height: auto;
+}
+.bkt{
+	text-align: left;
+	cursor: pointer;
+	display: inline-block;
+	width:269px;
+	height: 69px;
+}
+.bkt>div{
+	margin-top: 2px;
+	margin-bottom: 1px;
+	text-align: center;
+	width: 132px;
+	display: inline-block;
+	background: rgb(35,35,35);
+	height: 66px;
+	line-height: 66px;
+	font-size: 35px;
+	float: left!important;
+}
+.bkt>div:active{
+	box-shadow: 0 0 20px rgb(0,0,255);
+	text-shadow: 0 0 20px rgb(100,154,244);
+	color: rgb(0,0,255);
+	border: none!important;
+}
+#sqrt,#del{
+	padding: 0 !important;
+	font-size:50px!important;
+	vertical-align: middle!important;
+}
+.bkt .bktL{
+	margin-right: 2px;
+}
+.btnStyle{
+	margin-top: 10px;
+	border:solid 5px #fff;
+	box-sizing: border-box!important;
+	background-size:100% 100%;
+	background-image: url(http://sovety-vannoy.ru/wp-content/uploads/2016/04/последняя-2.jpg);
+	background-color: #000;
+
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	color: white;
+	width: 155px;
+	height: 155px;
+	overflow:hidden;
+}
+.btnStyleWrap{
+	text-align: center;
+	font-family: "RobotoRegular",sans-serif;
+	font-style: italic;
+	width: inherit;
+	height: inherit;
+	background-color:rgba(0,0,0,.6);
+	font-size: 30px;
+	line-height: 100px;
+	padding-top: 65px;
+	margin-top: 0 ;
+	opacity: 1;
+	margin-left: -5px;
+}
+.styleOptions{
+	min-width: 170px;
+	background-color: #000;
+	width: 170px;
+	height: 0;
+	min-height:0;
+	overflow:hidden;
+	color:white;
+	font-size: 20px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+.styleOptions ul{
+
+	list-style-type: none;
+
+}
+.styleOptions li{
+	padding-top: 10px;
+	cursor: pointer;
+	display: inline-block;
+	width: inherit;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.styleOptions ul>li>ul{
+	margin-top: 10px;
+	height: 0;
+	min-height: 0;
+	overflow: hidden;
+}
+.styleOptions ul>li>ul>li{
+	margin-top: 0;
+	width: 30px;
+	height: 30px;
+font-size: 0 !important;
+z-index: 10 !important;
+}
+.styleOptions ul>li>ul>li:nth-child(1){
+	border: 1px black solid;
+	background-color: white;
+}
+.styleOptions ul>li>ul>li:nth-child(2){	
+		border: .5px white solid;
+	background-color: black;
+}
+.styleOptions ul>li>ul>li:nth-child(3){
+	border: .5px white solid;
+	background-color: red;
+}
+.styleOptions ul>li>ul>li:nth-child(4){
+		border: .5px white solid;
+	background-color: green;
+}
+.styleOptions ul>li>ul>li:nth-child(5){
+		border: .5px white solid;
+	background-color: blue;
+}
+.styleOptions ul>li>ul>li:nth-child(6){
+		border: .5px white solid;
+	background-color: yellow;
+}
+.styleOptions ul>li>ul>li:nth-child(7){
+	background-color: orange;
+		border: .5px white solid;
+}
+.styleOptions ul>li>ul>li:nth-child(8){
+	background-color: violet;
+		border: .5px white solid;
+}
+.pageTitle{
+	font-family: "RobotoRegular",sans-serif;
+	font-size: 60px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	text-shadow:0 0 3px #000;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.calcMode{
+	font-size: 15px!important;
+
+}
+.calcRow>.calcMode{
+	height: 20px!important;
+	width: 49%;
+}
+.modeOn{
+	background-color:transparent!important;
+}
+
+.styleOptions>ul>li>.txtColorP{
+	position: absolute;
+	margin-top: -30px;
+	margin-left: -10px;
+	width: 0 !important;
+	height: 40px;
+	background-color: gray;
+}
+.styleOptions>ul>li:hover>.txtColorP{
+	width: 170px!important;
+	background-color: gray;
+	transition:all .25s ease-out;
+	z-index: 0 !important;
+}
+
+.styleOptions>ul>li>.styleText{
+	position: relative;
+	z-index:10!important;
+}
+.historyWrap{
+	margin-top: 100px;
+}
+.historyWrap .historyBlock{
+	font-size: 20px;
+	line-height: 30px;
+	height: 35px;
+	width: 45px;
+	background-color: #000;
+	padding: 5px;
+	padding-left: 10px;
+	color: #fff;
+}
+ .historyList{
+	width: 90vw;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	background-color: #000;
+	margin-left: -10px;
+	margin-top: -1px;
+	overflow: auto;
+	display: none;
+}

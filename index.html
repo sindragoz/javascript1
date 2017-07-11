@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+	<div class="container">
+	<div class="col-md-12 pageTitle">Калькулятор</div>
+	</div>
+	</div>
+		<div class="row">
+	
+	<div class="calc col-md-4 col-md-offset-3 col-sm-12">
+
+		<div class="calcWrap">
+			<div class="tbResWrap">
+				<input type="text" id="tbRes" name="tbResult" value="" placeholder="0" ><br>
+				<div class="bkt calcRow">
+					<div class="btnOperator bktL" onclick="addSymb(this)">(</div>
+					<div class="btnOperator bktR" onclick="addSymb(this)">)</div>
+				</div>
+
+			</div>
+
+			<div class="calcRow row0">
+				<div class="btnOperator clearOp" onclick="clearTb()">C</div>
+				<div class="btnOperator sqrtOp" ><span id="sqrt" onclick="addSymb(this)">&#8730</span></div>
+				<div class="btnOperator sqrOp" onclick="addSymb(this)">^</div>
+				<div class="btnOperator divOp"onclick="addSymb(this)">/</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="calcRow row1">
+				<div class="nums btn1" onclick="addSymb(this)">1</div>
+				<div class="nums btn2"onclick="addSymb(this)">2</div>
+				<div class="nums btn3"onclick="addSymb(this)">3</div>
+				<div class="btnOperator mulOp"onclick="addSymb(this)">*</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="calcRow row2">
+				<div class="nums btn4"onclick="addSymb(this)">4</div>
+				<div class="nums btn5"onclick="addSymb(this)">5</div>
+				<div class="nums btn6"onclick="addSymb(this)">6</div>
+				<div class="btnOperator minOp"onclick="addSymb(this)">-</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="calcRow row3">
+				<div class="nums btn7"onclick="addSymb(this)">7</div>
+				<div class="nums btn8"onclick="addSymb(this)">8</div>
+				<div class="nums btn9"onclick="addSymb(this)">9</div>
+				<div class="btnOperator plusOp"onclick="addSymb(this)">+</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="calcRow row4">
+				<div class="btnOperator btnDot"onclick="addSymb(this)">.</div>
+				<div class="nums btn0"onclick="addSymb(this)">0</div>
+				<div class="btnOperator btnDel"onclick="delSymb(this)"><span id="del">&#8592</span></div>
+				<div class="btnOperator resOp"onclick="getRes()">=</div>
+			</div>	
+		<div class="clearfix"></div>
+		<div class="calcRow row5"><div class="btnOperator calcMode modeH"  onclick="switchMode(true);switchModeStyle(this)">H</div>
+		<div class="btnOperator calcMode modeOn modeF" onclick="switchMode(false);switchModeStyle(this)">F</div></div>
+		<div class="clearfix"></div>
+		</div>	
+	</div>
+			<div class="btnStylePlace col-md-2 col-sm-12">
+				<div class="btnStyle" onclick="openStyleNav()" onmouseout="leaveStylebtn(this)" onmouseover="hoverStylebtn(this)">
+				<div class="btnStyleWrap">Стили</div>
+				</div>
+				</div>
+				<div class="styleOptionsWrap col-md-3 col-sm-12">
+		<div class="styleOptions">
+			<ul>
+				<li onclick="styleColorNav(this)">
+				<div class="styleText">Цвет кнопок</div> 
+<div class="txtColorP"></div>
+				<ul class="btnColor" >
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+					<li onclick="applyColor(this,'btn')"></li>
+				</ul></li>
+				<li onclick="styleColorNav(this)">
+				
+				<div class="styleText">Цвет текста</div> 
+<div class="txtColorP"></div>
+				<ul class="textColor" >
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+					<li onclick="applyColor(this,'txt')"></li>
+				</ul></li>
+				<li onclick="styleColorNav(this)"><div class="styleText">Цвет экрана</div> 
+<div class="txtColorP"></div>
+				<ul class="screenColor">
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+					<li onclick="applyColor(this,'screen')"></li>
+				</ul></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1"><div class="historyWrap"><div class="historyBlock"><i class="fa fa-newspaper-o historyBtn" onclick="showHistory()" aria-hidden="true"></i><div class="historyList"></div></div></div></div>
+	</div>
+	</div>
+	<script data-main="js/main.js" src="libs/require.js"></script>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<!--<script src="js/calculator.js"></script>
+	<script src="js/calcStyles.js"></script>-->
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

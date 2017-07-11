@@ -1,0 +1,130 @@
+*::-webkit-input-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*:-moz-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*::-moz-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+*:-ms-input-placeholder {
+	color: gray;
+	opacity: 0.5;
+}
+::selection {
+   background: transparent;
+}
+::-moz-selection {
+   background: transparent;
+}
+*{
+	box-sizing: border-box;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "AzoftSansRegular", sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	background: #000;
+}
+.calcRow>div{
+	font-weight: bold;
+	cursor: pointer;
+	width: 66px;
+	height: 66px;
+	display: inline-block;
+	line-height: 50px;
+	text-align: center;
+	padding: 5px;
+}
+.calcRow>div:hover{
+	box-shadow: 0 0 20px rgb(255,190,0);
+	text-shadow: 0 0 20px rgb(255,190,0);
+	transition:linear text-shadow,box-shadow .15s;
+}
+.calcRow>.clearOp{
+	color:rgb(176,19,98);
+}
+.calcWrap .btnOperator:hover{
+	box-shadow:none;
+	text-shadow: 0 0 20px rgb(255,190,0);
+	transition:linear text-shadow,box-shadow .15s;
+}
+.calcRow>div:active,.calcWrap .btnOperator:active{
+	box-shadow: 0 0 20px rgb(0,0,255);
+	text-shadow: 0 0 20px rgb(100,154,244);
+	color: rgb(0,0,255);
+	border: 2px solid rgb(0,0,255);
+	border-radius: 6px;
+}
+.calcRow>.nums{
+	border: 2px solid rgb(210,136,91);
+	border-radius: 6px;
+}
+.calc{
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 60px;
+	text-align: center;
+}
+.calcWrap{
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	border: 1px solid  rgb(210,136,91);
+	border-radius: 10px;
+}
+.calcWrap #tbRes{
+	border-right: none;
+	border-left: none;
+	border-bottom:2px solid #64A8D1;
+	border-top:2px solid #64A8D1;
+	text-align: right;
+	padding-right: 15px;
+	width: 430px;
+	background-color: #000;
+	font-size: 80px;
+	text-shadow: 0 0 20px rgb(255,190,0);
+}
+.tbResWrap{
+	display: inline-block;
+	
+	text-align: right;
+	font-size: 25px;
+	font-weight: bold;
+}
+.bkt{
+	position: absolute;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: -35px;
+	margin-left: -30px;
+}
+.bkt>div{
+	display: inline-block;
+}
+.bkt>div:active{
+	box-shadow: 0 0 20px rgb(0,0,255);
+	text-shadow: 0 0 20px rgb(100,154,244);
+	color: rgb(0,0,255);
+	border: none!important;
+}
+#sqrt,#del{
+	padding: 0 !important;
+	font-size:50px!important;
+	vertical-align: middle!important;
+}
+
